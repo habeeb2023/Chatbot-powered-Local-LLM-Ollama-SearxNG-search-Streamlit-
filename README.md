@@ -1,45 +1,41 @@
-# 🔎 Local LLM + SearxNG Chat (Streamlit)
+# 🔎 Local LLM + SearxNG Chat Assistant
 
-A simple **chat interface** that runs a local LLM (via [Ollama](https://ollama.com)) and augments it with **web search** through [SearxNG](https://docs.searxng.org/).  
+A powerful **AI chat assistant** that combines the best of both worlds: **privacy-focused local inference** using [Ollama](https://ollama.com) with **real-time web search** capabilities through [SearxNG](https://docs.searxng.org/). 
 
-The app uses [Streamlit](https://streamlit.io) for the UI and routes user queries either to the **local model** or to a **search-enabled agent** depending on whether the question requires up-to-date information.
+The assistant intelligently routes your queries - using local knowledge for general questions and web search for current events, facts, and time-sensitive information.
+
+![Python](https://img.shields.io/badge/python-v3.9+-blue.svg)
+![Ollama](https://img.shields.io/badge/ollama-compatible-green.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ---
 
 ## ✨ Features
-- **Local-only chat** with an Ollama model (`llama3.1` by default).
-- **Automatic routing**: decides when a web search is needed using a lightweight router agent.
-- **SearxNG integration**: fetches recent news, facts, stats, or events when local knowledge is insufficient.
-- **Streamlit UI**: clean chat interface with history, reset, and sidebar settings.
-- **Overrides**:  
-  - `/search your message` → force web search  
-  - `/local your message` → force local-only response  
+
+- 🤖 **Local LLM Chat** - Private, offline conversations using Ollama models
+- 🧠 **Smart Routing** - Automatically detects when web search is needed
+- 🔍 **Real-time Search** - Fetches current news, prices, events, and facts via SearxNG
+- 🎯 **Manual Overrides** - Force local-only or web-search modes with simple commands
+- 💬 **Clean Interface** - User-friendly chat UI with conversation history
+- 🔒 **Privacy First** - All processing happens locally, no data sent to external APIs
+- ⚡ **Fast Response** - Optimized for quick local inference and efficient search
 
 ---
 
-## 📦 Requirements
+## 🚀 Quick Start Guide
 
-- **Python** 3.9–3.12  
-- **Ollama** installed & running  
-  - [Download Ollama](https://ollama.com/download)  
-  - Pull your preferred model (default: `llama3.1`)  
-    ```bash
-    ollama pull llama3.1
-    ollama serve
-    ```
-- **SearxNG** running locally at `http://localhost:8080`  
-  - Quick Docker setup:  
-    ```bash
-    docker run -d --name searxng -p 8080:8080 searxng/searxng:latest
-    ```
-  - If using **Caddy** or another reverse proxy, make sure the base URL points correctly (no `/search` at the end).  
+### Prerequisites
 
----
+Before you begin, ensure you have:
+- **Python 3.9-3.12** installed
+- **Docker** installed (for SearxNG)
+- **Git** installed
 
-## ⚙️ Setup Instructions
+### Step 1: Install Ollama
 
-Clone the repo:
-
-```bash
-git clone https://github.com/your-username/chat-streamlit.git
-cd chat-streamlit
+#### Windows/macOS:
+1. Download Ollama from [ollama.com](https://ollama.com/download)
+2. Run the installer
+3. Open terminal/command prompt and verify installation:
+   ```bash
+   ollama --version
