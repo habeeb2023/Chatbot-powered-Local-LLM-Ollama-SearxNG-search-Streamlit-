@@ -1,0 +1,33 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# --- Virtual Environment ---
+venv/
+.venv/
+env/
+ENV/
+*.env.bak
+
+# --- Streamlit ---
+.streamlit/
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.iml
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+
+# --- Project-specific ---
+.env        # local environment variables

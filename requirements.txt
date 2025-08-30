@@ -1,0 +1,3 @@
+agno[tools]==0.1.70
+streamlit>=1.36
+python-dotenv>=1.0
